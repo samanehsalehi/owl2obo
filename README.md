@@ -5,12 +5,11 @@ This repository contains a simple script to convert OWL (Web Ontology Language) 
 ## Requirements
 
 - Python 3.x
-- rdflib library (`pip install rdflib`)
 
 ## Usage
 
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/owl-to-bo-converter.git
+git@github.com:samanehsalehi/owl2obo.git
 
