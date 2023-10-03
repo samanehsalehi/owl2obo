@@ -1,0 +1,10 @@
+{"Params":{
+	 "id1":"CLO_0000178",
+	 "id2":"OAE_0004334",
+	 "id3":"DRON_00010000",
+	 "id4":"UniProt"},
+ "Ontologies":{
+ 	 "obo":"http://purl.obolibrary.org/obo/",
+     "DMO":"http://www.semanticweb.org/DMO#"
+ 	}
+}
