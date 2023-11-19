@@ -3,7 +3,7 @@
 # Import libraries
 import json
 import xml.etree.ElementTree as ET
-# import argparse
+import argparse
 from argparse import RawTextHelpFormatter
 # read variable from config file
 with open('config.json', 'r') as c:
