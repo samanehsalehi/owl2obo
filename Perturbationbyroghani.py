@@ -1,14 +1,21 @@
 import csv
 import itertools
 import networkx as nx
-import pickle
 import random
 import time
-#----------------------- Load Pickle file ----------------------------------
+#----------------------- Random seed ----------------------------------
 def random_numbers(low, high, n): # generates random order for edge selection
 # ------------- Define seed---------------
     random.seed = 123
     return random.sample(range(low, high), n)
+#----------------------- Get input file ----------------------------------
+def argument_parser():
+    parser = argparse.ArgumentParser(prog='parser')
+    parser.add_argument("-i", "--input", required=True, dest="input_file",
+                        help="input of parser")
+    args = parser.parse_args()
+    infile = args.input_file
+    return infile
 
 #--------------------create graph from parsed obo file-------------------
 def create_graph(filename):
@@ -80,14 +87,6 @@ def robustness(graph):
                         break
     return finalInformation
 
-
-
-# -----------------------pickle creator------------------
-def pickle_creator(finalInformation):
-    with open('./finalResults1.pickle', 'wb') as f:
-        pickle.dump(finalInformation, f)
-
-
 # ------------------csv creator---------------------------
 def csv_creator(finalInformation):
     header = ['Graph Index','Nodes','Edges','number of removed edges','Last removed edge','Betweenness']
@@ -100,7 +99,8 @@ def csv_creator(finalInformation):
 # -----------------------main function----------------------
 def main():
     start_time = time.time()
-    g = create_graph('text/out_doid.txt')
+    input_file = argument_parser()
+    g = create_graph(input_file)
     edge_removal_result = robustness(g)
     pickle_creator(edge_removal_result)
     csv_creator(edge_removal_result)

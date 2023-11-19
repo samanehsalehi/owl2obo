@@ -39,8 +39,6 @@ def terms_loc(lines):
             no_next_bracket.append(nextbraket)
             break
     if not no_next_bracket:
-        print('********')
-        print(no_next_bracket)
         terms_locations.append(len(lines)-1)
     print(terms_locations[-1])
     # print(len(terms_locations))
