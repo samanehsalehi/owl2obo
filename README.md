@@ -5,7 +5,7 @@ Owl2Obo is a Python-based toolkit for working with ontologies, specifically desi
 ## Table of Contents
 - [Setup](#setup)
 - [Requirements](#requirements)
-- [Running programs](#running programs)
+- [Running programs](#runningprograms)
   - [`owl-obo.py`](#1-owl-obopy)
   - [`cross-ontology_parser.py`](#2-cross-ontology-parser.py)
   - [`Perturbation.py`](#3-perturbation.py)
